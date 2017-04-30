@@ -2,8 +2,10 @@
 import sys
 import operator
 from operator import itemgetter
+
 def main():
 	try:
+		# tenata
 		"""
 		Ship Name, Cargo, Weapons, Equipment, Cost
 		"""
