@@ -8,11 +8,11 @@ def euclidean_distance(a,b):
     c = [math.pow(a[i] - b[i],2) for i in range(len(b))]
     return round(math.sqrt(sum(c)),2)
 
-def get_distance(subPosition,shipList):
-    return [euclidean_distance(subPosition,ship)for ship in shipList]
+def get_distance(sub,ships):
+    return [euclidean_distance(sub,ship)for ship in ships]
 
 def main():
-    minScore = [100]
+    
     subs = [[1, 1], [2, 2], [2, 6], [4, 2], [4, 3], 
             [4, 7], [6, 1], [7, 1], [7, 4], [9, 1], 
             [9, 5], [9, 7], [10, 2], [10, 3], [10, 6]]    
@@ -26,8 +26,6 @@ def main():
     print(row_ind)
     print(col_ind)
     print(cost[row_ind, col_ind].sum())
-
-
 
 
 if __name__ == "__main__": 
