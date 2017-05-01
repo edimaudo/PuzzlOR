@@ -2,11 +2,6 @@
 #minimum possible total distance traveled by all boats
 
 
-
-
-#PuzzlOR February 2017 Any Port In A Storm
-#minimum possible total distance traveled by all boats 
-
 #31
 import sys
 
