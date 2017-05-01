@@ -1,4 +1,5 @@
- 
+ #PuzzlOR December 2016 - Galaxy on fire
+
 import sys
 import operator
 from operator import itemgetter
