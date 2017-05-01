@@ -1,4 +1,3 @@
- # PuzzlOR June 2013 Self Driving Cars
 
 import itertools
 import math
@@ -10,7 +9,7 @@ def euclidean_distance(alist):
     c = [math.pow(a[i] - b[i],2) for i in range(len(b))]
     return math.sqrt(sum(c))
 
-def calc(alist,adict):
+def calculate_distance(alist,adict):
 	distance = 0
 	maxvalue = len(alist)
 	count = 0
@@ -30,6 +29,7 @@ def calc(alist,adict):
 
 
 
+
 def main():
 	try:
 	    areainfo = {"a":[[2,1],[5,2]],
@@ -44,11 +44,10 @@ def main():
 	                "j":[[8,10],[9,8]]
 	                }
 	    areavalues = ["a","b","c","d","e","f","g","h","i","j"]
-	    output = []	    
-	    for value in itertools.permutations(areavalues):
-	    	output.append(calc(value,areainfo))
-	    print(min(output))
-                  
+
+	   
+	    print(min(list(calculate_distance(value,areainfo)  for value in itertools.permutations(areavalues))))
+
 	except:
 		e = sys.exc_info()
 		print(e)
