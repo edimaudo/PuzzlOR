@@ -1,26 +1,3 @@
-#import math
-#import random
-#
-#def calc_avg(alist):
-#    return math.ceil(sum(alist)/len(alist))
-#
-#def customerData():
-#    driverData = []
-#    countVal = 0
-#    maxCountVal = 60
-#    mandateDelivery = 60
-#    while countVal < maxCountVal:
-#        orderInterArrivalTime = 6
-#        orderArrival = math.ceil(random.expovariate(1/orderInterArrivalTime))
-#        orderCount = 0
-#        driverCount = 0
-#        pickupDeliveryList = []
-#        while orderCount < orderArrival:
-#            pickupDelivery = math.ceil(random.uniform(19,60))
-#            pickupDeliveryList.append(pickupDelivery)
-#            if calc_avg(pickupDeliveryList) < mandateDelivery:
-#                driverCount+=1
-#            orderCount+=1
-#        driverData.append(driverCount)
-#        countVal+=1
-#    return(calc_avg(driverData))
+#5 x 5 poker
+
+#What arrangement of cards maximizes the total point value from all 10 hands?
