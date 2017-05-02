@@ -20,9 +20,10 @@ def generate_random(alist):
     return random.randint(0,len(alist)-1)
 
 def prisoner_move(position,prison):
+    
     tempList = prison[position]
-    tempValue = generate_random(tempList)
-    return tempList[tempValue]
+    tempValue = max(tempList)
+    return tempValue#tempList[tempValue]
 
 def guard_move(position,prison,guardData):
     output = weighted_choice(guardData)
@@ -39,7 +40,6 @@ def guard_move(position,prison,guardData):
     if nextMove == 0:
         nextMove = position
     return nextMove
-
 
 def main():
     prison = {
@@ -82,7 +82,7 @@ def main():
     
     guard1_data = [("North",20),("South",40),("East",20),("West",20)]
     guard2_data = [("North",40),("South",10),("East",20),("West",30)]
-    #print(weighted_choice(guard1_data))
+
     countval = 0
     maxcountval = 10000
     outcome = []
@@ -115,8 +115,9 @@ def main():
                 if guard2 not in guard2_Position:
                     guard2 = guard_move(guard2,prison,guard2_data)
         countval +=1
-    print(len([value for value in outcome if value == "caught"]))
-    print(len([value for value in outcome if value == "escaped"]))
+
+    print("Caught: " + str(len([value for value in outcome if value == "caught"])))
+    print("Escaped: " +  str(len([value for value in outcome if value == "escaped"])))
     print(escape_Route[0:5])
 
 if __name__ == "__main__":
