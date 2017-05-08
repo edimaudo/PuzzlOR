@@ -1,7 +1,6 @@
 % PuzzlOR April 2011 - Choose Your Crew
 % http://www.puzzlor.com/2011-04_ChooseYourCrew.html
-% Goal: Find the right amount of workers
-& used minizinc
+% Goal: Find the right amount of workers & used minizinc
 
 %variables
 %A	Skills for Amy

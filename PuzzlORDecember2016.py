@@ -1,12 +1,14 @@
  #PuzzlOR December 2016 - Galaxy on fire
 
+# tenata
+
 import sys
 import operator
 from operator import itemgetter
 
 def main():
 	try:
-		# tenata
+		
 		"""
 		Ship Name, Cargo, Weapons, Equipment, Cost
 		"""
@@ -24,9 +26,9 @@ def main():
 		}
 
 		cargo_info = [[ship,ship_info[ship][0]] for ship in ship_info]
-		weapon_info = [[ship,ship_info[ship][0]] for ship in ship_info]
-		equipment_info = [[ship,ship_info[ship][0]] for ship in ship_info]
-		cost_info = [[ship,ship_info[ship][0]] for ship in ship_info]
+		weapon_info = [[ship,ship_info[ship][1]] for ship in ship_info]
+		equipment_info = [[ship,ship_info[ship][2]] for ship in ship_info]
+		cost_info = [[ship,ship_info[ship][3]] for ship in ship_info]
 
 		sorted_cargo = sorted(cargo_info,key=operator.itemgetter(1))
 		sorted_weapon = sorted(weapon_info,key=operator.itemgetter(1))
@@ -39,15 +41,17 @@ def main():
 		options.append(sorted_equipment[0][0])
 		options.append(sorted_cost[0][0])
 
-		option_info = {}
-		for option in options:
-			if option not in option_info:
-				option_info[option] = 1
-			else:
-				option_info[option]+=1
+		print(options)
+
+		# #option_info = {}
+		# for option in options:
+		# 	if option not in option_info:
+		# 		option_info[option] = 1
+		# 	else:
+		# 		option_info[option]+=1
 		
-		sorted_option = sorted(option_info,key=operator.itemgetter(1))
-		print(sorted_option[0])
+		# sorted_option = sorted(option_info,key=operator.itemgetter(1))
+		# print(sorted_option)
 		
 	except:
 		e = sys.exc_info()
