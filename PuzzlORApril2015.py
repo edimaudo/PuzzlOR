@@ -5,15 +5,55 @@ import math
 import sys
 import numpy as np
 
-def main():
+def secure():
 	try:
-		#do something
+		secure_water_source = [1,0]
+		secure_water_source_prob = [0.2,0.8]
+		secure_water_source_death = [0,1]
+		secure_water_source_death_prob = [0.15,0.85]
+
+		build_shelter = [1,0]
+		build_shelter_prob = [0.15,0.85]
+		build_shelter_source_death = [0,1]
+		build_shelter_death_prob = [0.1,0.9]
+
+		secure_food_source = [1,0]
+		secure_food_source_prob = [0.1,0.9]
+		secure_food_source_death = [0,1]
+		secure_food_source_death_prob = [0.05,0.95]
+
+		maxamount = 1001
+		count = 1
+		yescount = 0
+		notdead = True
+		while count < maxamount:
+			while notdead:
+				secure_water_outcome = np.random.choice(secure_water_source,p=secure_water_source_prob)
+				secure_water_death_outcome = np.random.choice(secure_water_source_death,p=secure_water_source_death_prob)
+				if 
+
+
+			
+			#secure_water_outcome = np.random.choice(secure_water_source,p=secure_water_source_prob)
+			#build_shelter_outcome = np.random.choice(secure_water_source,p=secure_water_source_prob)
+			#secure_food_outcome = np.random.choice(secure_water_source,p=secure_water_source_prob)
+			#if secure_water_outcome + build_shelter_outcome + secure_food_outcome == 3:
+			#	yescount+=1
+			count+=1
+		return (yescount)
+
 	except:
-		#do something
+		
 		e = sys.exc_info()
 		print(e)
 		sys.exit(1)
 
+def main():
+	np.random.seed(1)
+	a= [secure()/1000.00 for i in range(0,100)]
+	print("survival: " + str(sum(a)/len(a)))
+	confidence_interval = st.t.interval(0.95, len(a)-1, loc=np.mean(a), scale=st.sem(a))
+	print("survival confidence interval: " + str(confidence_interval)) 
 
 if __name__ == "__main__":
     main()
