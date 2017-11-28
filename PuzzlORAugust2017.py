@@ -2,49 +2,46 @@
 import random
 from collections import Counter
 
-chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + \
-        'abcdefghijklmnopqrstuvwxyz' + \
-        '0123456789' + \
-        ':.;,?!@#$%&()+=-*/_<> []{}`~^"\'\\'
-
 def main():
-	message = 'DKFFQHXAQBUTKTKUGHJNMDHPAQBDUCKO' + " " + \
-	'TUOEKGMDKOQGKVHMDAQBTPBSKTHQTUJU' + " " + \
-	'FAMHOPPEHFFPHVUJMKGMQMDUJEAQBXQTT' + " " + \
-	'KUGHJNMDKSBYYFQTXQTMDKPKSUPMMKJA' + " " + \
-	'KUTPUJGFKMAQBEJQVMDUMMDHPVHFFRKM' +  " " + \
-	'DKFUPMSBYYFKMDHPDUPRKKJUVQJGKTXBF' +  " " + \
-	'QSSQTMBJHMAXQTIKMQOQJMTHRBMKMQMD' + " " + \
-	'KHJXQTIPOQIIBJHMAUJGIKKMIUJAJKVSKQS' + " " + \
-	'FKRBMHMPMHIKMQOFQPKMDHPODUSMKTUJ' + " " + \
+
+	         #'helloifyouarereadingthisyouhave'
+	message = 'DKFFQHXAQBUTKTKUGHJNMDHPAQBDUCKO' + \
+	'TUOEKGMDKOQGKVHMDAQBTPBSKTHQTUJU' + \
+	'FAMHOPPEHFFPHVUJMKGMQMDUJEAQBXQTT' + \
+	'KUGHJNMDKSBYYFQTXQTMDKPKSUPMMKJA' + \
+	'KUTPUJGFKMAQBEJQVMDUMMDHPVHFFRKM'  + \
+	'DKFUPMSBYYFKMDHPDUPRKKJUVQJGKTXBF'  + \
+	'QSSQTMBJHMAXQTIKMQOQJMTHRBMKMQMD'  + \
+	'KHJXQTIPOQIIBJHMAUJGIKKMIUJAJKVSKQS'  + \
+	'FKRBMHMPMHIKMQOFQPKMDHPODUSMKTUJ'  + \
 	'GIQCKQJMQJKVQSSQTMBJHMHKPMDUJEAQB'
 	
 	#frequency analysis
 	#print(Counter(message))
-	collection_info = {"A":"u",
-	"B":" ",
-	"C":" ",
+	collection_info = {"A":"y",
+	"B":"u",
+	"C":"v",
 	"D":"h",
-	"E":" ",
+	"E":"k",
 	"F":"l",
-	"G":" ",
+	"G":"d",
 	"H":"i",
-	"I":" ",
+	"I":"m",
 	"J":"n",
 	"K":"e",
 	"L":" ",
 	"M":"t",
-	"N":" ",
-	"O":" ",
-	"P":" ",
+	"N":"g",
+	"O":"c",
+	"P":"s",
 	"Q":"o",
-	"R":" ",
+	"R":"b",
 	"S":"p",
 	"T":"r",
 	"U":"a",
-	"V":" ",
+	"V":"w",
 	"W":" ",
-	"X":" ",
+	"X":"f",
 	"Y":"z",
 	"Z":" "
 
@@ -52,7 +49,7 @@ def main():
 
 	newmessage = ""
 	info = ""
-	for i in range(0, len(message)-1):
+	for i in range(0, len(message)):
 		info = message[i]
 		if info == " ":
 			newmessage+=info
