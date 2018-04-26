@@ -29,6 +29,7 @@ def calc_driver(alist):
 
 def main():
 	try:
+		random.seed(1)
 		driver_data = []
 		count_begin = 0
 		count_end = 100000
