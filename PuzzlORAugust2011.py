@@ -36,7 +36,7 @@ def main():
     while count < maxcount:
         #Patient Arrival
         patientInterArrival = 6
-        numPatients = math.ceil(random.normalvariate(patientInterArrival,2))
+        numPatients = int(math.ceil(random.normalvariate(patientInterArrival,2)))
         patientScreen = [0,0,0]
 
         #Patient Assignment
