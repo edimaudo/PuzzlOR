@@ -9,6 +9,7 @@ import random
 #FIFO
 def main():
 	try:
+		random.seed(1)
 		time_total = 0
 		count_begin = 0
 		count_end = 100
@@ -18,7 +19,7 @@ def main():
 			while hole_begin <= hole_end:
 
 				inter_arrival_time = 10.0
-				time_info = random.expovariate(1/inter_arrival_time)
+				time_info = random.expovariate(1.0/inter_arrival_time)
 				
 				#skill in minutes
 				player_skill = [5,7,10]
