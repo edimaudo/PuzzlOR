@@ -6,5 +6,3 @@ minizinc - http://www.minizinc.org/
 
 Excel
 
-Simul8
-
