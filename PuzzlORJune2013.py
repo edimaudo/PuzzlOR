@@ -27,9 +27,6 @@ def calculate_distance(alist,adict):
 			
 	return distance
 
-
-
-
 def main():
 	try:
 	    areainfo = {"a":[[2,1],[5,2]],
