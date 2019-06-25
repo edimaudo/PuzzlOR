@@ -1,35 +1,65 @@
 #PuzzlOR February 2014 Pizza Delivery
+
 import random
 import sys
 import math
 
 def main():
 	try:
-		random.seed(3)
-
-		#data
-		#interarrival time of 6 minutes exponentially distributed
-		interarrival_time = 6.0
-		arrival_time = int(random.expovariate(1/interarrival_time))
-
-		#service rate
-		service_rate = math.ceil(random.uniform(20,61))
-
-		#average order delivery time < 60 minutes
-		max_time = 60
-
-		number_customers = 10
-
-		workers_needed = (number_customers * service_rate)/max_time
-		print(int(workers_needed)+1)
+		#do something
+		random.seed(123)
+		#of drivers needed
+		drivers = []
+		number_of_iterations = 10000
+		iterationsComplete = True
+		iterationsDone = 0
+		while(iterationsComplete):
+			if iterationsDone = 10000:
+				iterationsComplete = False
+				break
+			else:
+				
+			iterationsDone += 1
 	except:
 		e = sys.exc_info()
 		print(e)
-		sys.exit(1)
-   
+		sys.exit(1)		
+
 
 if __name__ == "__main__":
     main()
+
+# import random
+# import sys
+# import math
+
+# def main():
+# 	try:
+# 		random.seed(3)
+
+# 		#data
+# 		#interarrival time of 6 minutes exponentially distributed
+# 		interarrival_time = 6.0
+# 		arrival_time = int(random.expovariate(1/interarrival_time))
+
+# 		#service rate
+# 		service_rate = math.ceil(random.uniform(20,61))
+
+# 		#average order delivery time < 60 minutes
+# 		max_time = 60
+
+# 		number_customers = 10
+
+# 		workers_needed = (number_customers * service_rate)/max_time
+# 		print(int(workers_needed)+1)
+# 	except:
+# 		e = sys.exc_info()
+# 		print(e)
+# 		sys.exit(1)
+   
+
+# if __name__ == "__main__":
+#     main()
 
 # #PuzzlOR February 2014 Pizza Delivery
 # import random
