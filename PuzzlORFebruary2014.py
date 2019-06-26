@@ -4,27 +4,37 @@ import random
 import sys
 import math
 
-def main():
-	try:
-		#do something
-		random.seed(123)
-		#of drivers needed
-		drivers = []
-		number_of_iterations = 10000
-		iterationsComplete = True
-		iterationsDone = 0
-		while(iterationsComplete):
-			if iterationsDone = 10000:
-				iterationsComplete = False
-				break
-			else:
-				
-			iterationsDone += 1
-	except:
-		e = sys.exc_info()
-		print(e)
-		sys.exit(1)		
+# def main():
+# 	try:
+# 		random.seed(123)
+# 		#of drivers needed
+# 		drivers = []
+# 		number_of_iterations = 10000
+# 		iterationsComplete = True
+# 		iterationsDone = 0
+# 		while(iterationsComplete):
+# 			if iterationsDone = 10000:
+# 				iterationsComplete = False
+# 				break
+# 			else:
+# 				#order arrival time
+# 				interarrival_time = 6.0
+# 				arrival_time = int(random.expovariate(1/interarrival_time))
 
+# 				#service rate
+# 				service_rate = math.ceil(random.uniform(20,61))
+
+# 			iterationsDone += 1
+# 	except:
+# 		e = sys.exc_info()
+# 		print(e)
+# 		sys.exit(1)		
+
+def main():
+	random.seed(12)
+	interarrival_time = 6.0
+	arrival_time = int(random.expovariate(1/interarrival_time))	
+	print(arrival_time)
 
 if __name__ == "__main__":
     main()
