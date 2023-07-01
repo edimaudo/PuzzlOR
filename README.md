@@ -2,9 +2,9 @@ Solutions to [PuzzlOR](http://www.puzzlor.com/About.html)
 
 Solutions using 
 
-Python 
+- Python 
 
-[minizinc](http://www.minizinc.org/)
+- [minizinc](http://www.minizinc.org/)
 
-Excel Solver
+- Excel Solver
 
